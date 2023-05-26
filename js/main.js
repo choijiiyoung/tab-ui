@@ -8,6 +8,10 @@ btns.forEach((btn, idx) => {
 	btn.addEventListener('click', (e) => {
 		e.preventDefault();
 
+		//이벤트 재할당 방지
+		const isOn = e.currentTarget.classList.contains('on');
+		if (isOn) return;
+
 		active(btns, idx);
 		active(boxs, idx);
 	});
@@ -16,9 +20,7 @@ btns.forEach((btn, idx) => {
 //3. 함수
 function active(arrEl, index) {
 	console.log('click');
-	//panel on 클래스 초기화
-	for (const el of arrEl) el.classList.remove('on');
 
-	//클릭한 버튼과 같은 인덱스의 panel에 on 클래스 추가
+	for (const el of arrEl) el.classList.remove('on');
 	arrEl[index].classList.add('on');
 }
