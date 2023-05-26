@@ -8,18 +8,17 @@ btns.forEach((btn, idx) => {
 	btn.addEventListener('click', (e) => {
 		e.preventDefault();
 
-		//버튼 on 클래스 초기화
-		for (const el of btns) el.classList.remove('on');
-
-		//클릭한 버튼에만 on 클래스 추가
-		btns[idx].classList.add('on');
-
-		//panel on 클래스 초기화
-		for (const el of boxs) el.classList.remove('on');
-
-		//클릭한 버튼과 같은 인덱스의 panel에 on 클래스 추가
-		boxs[idx].classList.add('on');
+		active(btns, idx);
+		active(boxs, idx);
 	});
 });
 
 //3. 함수
+function active(arrEl, index) {
+	console.log('click');
+	//panel on 클래스 초기화
+	for (const el of arrEl) el.classList.remove('on');
+
+	//클릭한 버튼과 같은 인덱스의 panel에 on 클래스 추가
+	arrEl[index].classList.add('on');
+}
