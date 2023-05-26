@@ -21,10 +21,10 @@ main {
   align-items: center;
   margin: 100px auto;
 }
-main .tab {
+main .btn {
   width: 200px;
 }
-main .tab li a {
+main .btn li a {
   display: flex;
   height: 100px;
   justify-content: center;
@@ -33,7 +33,7 @@ main .tab li a {
   color: #fff;
   font: bold 20px "arial";
 }
-main .tab li.on a {
+main .btn li.on a {
   color: yellow;
 }
 main .panel {
