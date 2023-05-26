@@ -1,0 +1,58 @@
+@import 'reset';
+
+main {
+	width: 600px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 100px auto;
+
+	.tab {
+		width: 200px;
+
+		li {
+			a {
+				display: flex;
+				height: 100px;
+				justify-content: center;
+				align-items: center;
+				background: darkblue;
+				color: #fff;
+				font: bold 20px 'arial';
+			}
+
+			&.on {
+				a {
+					color: yellow;
+				}
+			}
+		}
+	}
+
+	.panel {
+		position: relative;
+		width: calc(100% - 200px);
+		height: 300px;
+
+		article {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background: #efefef;
+			font: bold 28px 'arial';
+			opacity: 0;
+			z-index: 1;
+			transition: opacity 0.5;
+
+			&.on {
+				opacity: 1;
+				z-index: 2;
+			}
+		}
+	}
+}

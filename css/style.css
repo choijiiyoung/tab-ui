@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+main {
+  width: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 100px auto;
+}
+main .tab {
+  width: 200px;
+}
+main .tab li a {
+  display: flex;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+  background: darkblue;
+  color: #fff;
+  font: bold 20px "arial";
+}
+main .tab li.on a {
+  color: yellow;
+}
+main .panel {
+  position: relative;
+  width: calc(100% - 200px);
+  height: 300px;
+}
+main .panel article {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #efefef;
+  font: bold 28px "arial";
+  opacity: 0;
+  z-index: 1;
+  transition: opacity 0.5;
+}
+main .panel article.on {
+  opacity: 1;
+  z-index: 2;
+}
+
+/*# sourceMappingURL=style.css.map */
